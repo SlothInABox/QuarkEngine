@@ -1,0 +1,3 @@
+﻿  Application.cpp
+D:\Physics Projects\Engine\Sandbox\src\Application.cpp(7,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Sandbox.vcxproj -> D:\Physics Projects\Engine\bin\Debug-x64\Sandbox\Sandbox.exe
