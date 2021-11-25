@@ -3,7 +3,7 @@
 // For use by applications
 
 #include "Engine/Application.h"
-#include <cstdio>
+#include "Engine/Log.h"
 
 // Entry point
 #include "Engine/EntryPoint.h"
