@@ -1,2 +1,2 @@
-# Engine
- Cherno Hazel Engine series
+# Quark Engine
+ Based on the Hazel engine by The Cherno
