@@ -1,6 +1,6 @@
-#include <Engine.h>
+#include <Quark.h>
 
-class Sandbox : public Engine::Application
+class Sandbox : public Quark::Application
 {
 public:
 	Sandbox()
@@ -15,7 +15,7 @@ public:
 
 };
 
-Engine::Application* Engine::CreateApplication()
+Quark::Application* Quark::CreateApplication()
 {
 	return new Sandbox();
 }

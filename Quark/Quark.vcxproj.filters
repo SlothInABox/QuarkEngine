@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quark">
+      <UniqueIdentifier>{0995FA0D-75A9-22BF-3E2B-C61EAAFE1EF0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Quark.h" />
+    <ClInclude Include="src\Quark\Application.h">
+      <Filter>Quark</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Core.h">
+      <Filter>Quark</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\EntryPoint.h">
+      <Filter>Quark</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Log.h">
+      <Filter>Quark</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Quark\Application.cpp">
+      <Filter>Quark</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quark\Log.cpp">
+      <Filter>Quark</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

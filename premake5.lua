@@ -1,4 +1,4 @@
-workspace "Engine"
+workspace "Quark"
 	architecture "x64"
 	startproject "Sandbox"
 
@@ -11,8 +11,8 @@ workspace "Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Engine"
-	location "Engine"
+project "Quark"
+	location "Quark"
 	kind "SharedLib"
 	language "C++"
 
@@ -37,8 +37,8 @@ project "Engine"
 
 		defines
 		{
-			"ENG_PLATFORM_WINDOWS",
-			"ENG_BUILD_DLL"
+			"QRK_PLATFORM_WINDOWS",
+			"QRK_BUILD_DLL"
 		}
 
 		postbuildcommands
@@ -47,15 +47,15 @@ project "Engine"
 		}
 
 	filter "configurations:Debug"
-		defines "ENG_DEBUG"
+		defines "QRK_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "ENG_RELEASE"
+		defines "QRK_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines "ENG_DIST"
+		defines "QRK_DIST"
 		optimize "On"
 
 project "Sandbox"
@@ -74,13 +74,13 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Engine/vendor/spdlog/include",
-		"Engine/src"
+		"Quark/vendor/spdlog/include",
+		"Quark/src"
 	}
 
 	links
 	{
-		"Engine"
+		"Quark"
 	}
 
 	filter "system:windows"
@@ -90,17 +90,17 @@ project "Sandbox"
 
 		defines
 		{
-			"ENG_PLATFORM_WINDOWS"
+			"QRK_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
-		defines "ENG_DEBUG"
+		defines "QRK_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "ENG_RELEASE"
+		defines "QRK_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines "ENG_DIST"
+		defines "QRK_DIST"
 		optimize "On"
