@@ -1,5 +1,6 @@
 #pragma once
 
+#include "qrkpch.h"
 #include "Quark/Core.h"
 
 namespace Quark

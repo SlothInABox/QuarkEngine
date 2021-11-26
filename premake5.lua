@@ -1,110 +1,123 @@
 workspace "Quark"
-	architecture "x64"
-	startproject "Sandbox"
+    architecture "x64"
+    startproject "Sandbox"
 
-	configurations
-	{
-		"Debug",
-		"Release",
-		"Dist"
-	}
+    configurations
+    {
+        "Debug",
+        "Release",
+        "Dist"
+    }
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Quark/vendor/GLFW/include"
+
+include "Quark/vendor/GLFW"
+
 project "Quark"
-	location "Quark"
-	kind "SharedLib"
-	language "C++"
+    location "Quark"
+    kind "SharedLib"
+    language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "qrkpch.h"
-	pchsource "Quark/src/qrkpch.cpp"
+    pchheader "qrkpch.h"
+    pchsource "Quark/src/qrkpch.cpp"
 
-	files
-	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
-	}
+    files
+    {
+        "%{prj.name}/src/**.h",
+        "%{prj.name}/src/**.cpp"
+    }
 
-	includedirs
-	{
-		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
-	}
+    includedirs
+    {
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
 
-	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
-		systemversion "latest"
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
+    }
 
-		defines
-		{
-			"QRK_PLATFORM_WINDOWS",
-			"QRK_BUILD_DLL"
-		}
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "On"
+        systemversion "latest"
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/")
-		}
+        defines
+        {
+            "QRK_PLATFORM_WINDOWS",
+            "QRK_BUILD_DLL"
+        }
 
-	filter "configurations:Debug"
-		defines "QRK_DEBUG"
-		symbols "On"
+        postbuildcommands
+        {
+            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/")
+        }
 
-	filter "configurations:Release"
-		defines "QRK_RELEASE"
-		optimize "On"
+    filter "configurations:Debug"
+        defines "QRK_DEBUG"
+        symbols "On"
 
-	filter "configurations:Dist"
-		defines "QRK_DIST"
-		optimize "On"
+    filter "configurations:Release"
+        defines "QRK_RELEASE"
+        optimize "On"
+
+    filter "configurations:Dist"
+        defines "QRK_DIST"
+        optimize "On"
 
 project "Sandbox"
-	location "Sandbox"
-	kind "ConsoleApp"
-	language "C++"
+    location "Sandbox"
+    kind "ConsoleApp"
+    language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	files
-	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
-	}
+    files
+    {
+        "%{prj.name}/src/**.h",
+        "%{prj.name}/src/**.cpp"
+    }
 
-	includedirs
-	{
-		"Quark/vendor/spdlog/include",
-		"Quark/src"
-	}
+    includedirs
+    {
+        "Quark/vendor/spdlog/include",
+        "Quark/src"
+    }
 
-	links
-	{
-		"Quark"
-	}
+    links
+    {
+        "Quark"
+    }
 
-	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
-		systemversion "latest"
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "On"
+        systemversion "latest"
 
-		defines
-		{
-			"QRK_PLATFORM_WINDOWS"
-		}
+        defines
+        {
+            "QRK_PLATFORM_WINDOWS"
+        }
 
-	filter "configurations:Debug"
-		defines "QRK_DEBUG"
-		symbols "On"
+    filter "configurations:Debug"
+        defines "QRK_DEBUG"
+        symbols "On"
 
-	filter "configurations:Release"
-		defines "QRK_RELEASE"
-		optimize "On"
+    filter "configurations:Release"
+        defines "QRK_RELEASE"
+        optimize "On"
 
-	filter "configurations:Dist"
-		defines "QRK_DIST"
-		optimize "On"
+    filter "configurations:Dist"
+        defines "QRK_DIST"
+        optimize "On"
