@@ -2,9 +2,6 @@
 
 #include "Quark/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Quark
 {
 

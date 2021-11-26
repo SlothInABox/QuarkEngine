@@ -1,3 +1,4 @@
+#include "qrkpch.h"
 #include "Application.h"
 
 #include "Quark/Events/ApplicationEvent.h"

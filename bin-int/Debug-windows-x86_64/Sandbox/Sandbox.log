@@ -1,6 +1,28 @@
 ﻿  SandboxApp.cpp
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\Log.h(20,42): warning C4251: 'Quark::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Quark::Log'
-D:\Physics Projects\QuarkEngine\Quark\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\Log.h(21,42): warning C4251: 'Quark::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Quark::Log'
-D:\Physics Projects\QuarkEngine\Quark\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-  Sandbox.vcxproj -> D:\Physics Projects\QuarkEngine\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(45,16): error C2039: 'string': is not a member of 'std'
+D:\Physics Projects\QuarkEngine\Sandbox\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(45,23): error C3646: 'ToString': unknown override specifier
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(45,32): error C2059: syntax error: ')'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(45,40): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(58,24): error C2039: 'function': is not a member of 'std'
+D:\Physics Projects\QuarkEngine\Sandbox\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(58,19): error C2061: syntax error: identifier 'function'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(59,8): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,14): error C2039: 'ostream': is not a member of 'std'
+D:\Physics Projects\QuarkEngine\Sandbox\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,21): error C2988: unrecognizable template declaration/definition
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,21): error C2143: syntax error: missing ';' before '&'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,21): error C7524: 'inline' specifier cannot appear on a block-scope declaration or non-static data member
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(76,39): error C2039: 'ostream': is not a member of 'std'
+D:\Physics Projects\QuarkEngine\Sandbox\predefined C++ types (compiler internal)(341): message : see declaration of 'std'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Events\Event.h(77,2): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(6,1): error C2988: unrecognizable template declaration/definition
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(6,1): error C2059: syntax error: 'namespace'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(7,1): error C2143: syntax error: missing ';' before '{'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(7,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h(155,29): error C2065: 'va_list': undeclared identifier
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h(155,38): error C2988: unrecognizable template declaration/definition
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h(155,38): error C2059: syntax error: ','
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h(175,9): error C2631: '__vcrt_va_list_is_reference': a class or enum cannot be defined in an alias template
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(96,1): fatal error C1903: unable to recover from previous error(s); stopping compilation

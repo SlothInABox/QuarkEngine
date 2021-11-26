@@ -19,6 +19,9 @@ project "Quark"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "qrkpch.h"
+	pchsource "Quark/src/qrkpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
