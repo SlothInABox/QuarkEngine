@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Quark/vendor/GLFW/include"
+IncludeDir["Glad"] = "Quark/vendor/Glad/include"
 
 include "Quark/vendor/GLFW"
+include "Quark/vendor/Glad"
 
 project "Quark"
     location "Quark"
@@ -38,12 +40,14 @@ project "Quark"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -55,7 +59,8 @@ project "Quark"
         defines
         {
             "QRK_PLATFORM_WINDOWS",
-            "QRK_BUILD_DLL"
+            "QRK_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
