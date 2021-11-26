@@ -4,6 +4,9 @@
     <Filter Include="Quark">
       <UniqueIdentifier>{0995FA0D-75A9-22BF-3E2B-C61EAAFE1EF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Quark\Events">
+      <UniqueIdentifier>{CD1C67BB-B97F-F65F-6205-2F164E47C2E2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Quark.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Quark\EntryPoint.h">
       <Filter>Quark</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Events\ApplicationEvent.h">
+      <Filter>Quark\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Events\Event.h">
+      <Filter>Quark\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Events\KeyEvent.h">
+      <Filter>Quark\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quark\Events\MouseEvent.h">
+      <Filter>Quark\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Quark\Log.h">
       <Filter>Quark</Filter>

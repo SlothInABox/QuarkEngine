@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Physics Projects\Engine\bin\Debug-windows-x86_64\Quark\Quark.dll</FullPath>
+      <FullPath>D:\Physics Projects\QuarkEngine\bin\Debug-windows-x86_64\Quark\Quark.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Physics Projects\Engine\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe</FullPath>
+      <FullPath>D:\Physics Projects\QuarkEngine\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

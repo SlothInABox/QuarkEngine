@@ -1,11 +1,13 @@
 #pragma once
 
 #ifdef QRK_PLATFORM_WINDOWS
-#ifdef QRK_BUILD_DLL
-#define QUARK_API __declspec(dllexport)
+	#ifdef QRK_BUILD_DLL
+		#define QUARK_API __declspec(dllexport)
+	#else
+		#define  QUARK_API __declspec(dllimport)
+	#endif
 #else
-#define  QUARK_API __declspec(dllimport)
+	#error Engine only supports windows
 #endif
-#else
-#error Engine only supports windows
-#endif
+
+#define BIT(x) (1 << x)
