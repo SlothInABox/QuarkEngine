@@ -65,14 +65,17 @@ project "Quark"
 
     filter "configurations:Debug"
         defines "QRK_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "QRK_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "QRK_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -112,12 +115,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "QRK_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "QRK_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "QRK_DIST"
+        buildoptions "/MD"
         optimize "On"

@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,6 +161,8 @@
     <ClInclude Include="src\Quark\Events\Event.h" />
     <ClInclude Include="src\Quark\Events\KeyEvent.h" />
     <ClInclude Include="src\Quark\Events\MouseEvent.h" />
+    <ClInclude Include="src\Quark\Layer.h" />
+    <ClInclude Include="src\Quark\LayerStack.h" />
     <ClInclude Include="src\Quark\Log.h" />
     <ClInclude Include="src\Quark\Window.h" />
     <ClInclude Include="src\qrkpch.h" />
@@ -165,6 +170,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Quark\Application.cpp" />
+    <ClCompile Include="src\Quark\Layer.cpp" />
+    <ClCompile Include="src\Quark\LayerStack.cpp" />
     <ClCompile Include="src\Quark\Log.cpp" />
     <ClCompile Include="src\qrkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

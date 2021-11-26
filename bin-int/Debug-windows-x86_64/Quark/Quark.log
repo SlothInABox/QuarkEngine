@@ -1,5 +1,48 @@
-﻿  Application.cpp
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(23,27): warning C4251: 'Quark::Application::m_Window': class 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>' needs to have dll-interface to be used by clients of class 'Quark::Application'
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(23): message : see declaration of 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>'
+﻿cl : command line warning D9025: overriding '/MTd' with '/MDd'
+  qrkpch.cpp
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Log.h(18,42): warning C4251: 'Quark::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Quark::Log'
+D:\Physics Projects\QuarkEngine\Quark\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Log.h(19,42): warning C4251: 'Quark::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Quark::Log'
+D:\Physics Projects\QuarkEngine\Quark\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+cl : command line warning D9025: overriding '/MTd' with '/MDd'
+  WindowsWindow.cpp
+  Application.cpp
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Layer.h(22,15): warning C4251: 'Quark::Layer::m_DebugName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Quark::Layer'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(25,23): warning C4251: 'Quark::LayerStack::m_Layers': class 'std::vector<Quark::Layer *,std::allocator<Quark::Layer *>>' needs to have dll-interface to be used by clients of class 'Quark::LayerStack'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(22): message : see declaration of 'std::vector<Quark::Layer *,std::allocator<Quark::Layer *>>'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(26,33): warning C4251: 'Quark::LayerStack::m_LayerInsert': class 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>' needs to have dll-interface to be used by clients of class 'Quark::LayerStack'
+          with
+          [
+              _Ty=Quark::Layer *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(470): message : see declaration of 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+          with
+          [
+              _Ty=Quark::Layer *
+          ]
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(28,27): warning C4251: 'Quark::Application::m_Window': class 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>' needs to have dll-interface to be used by clients of class 'Quark::Application'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(28): message : see declaration of 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>'
+  Layer.cpp
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Layer.h(22,15): warning C4251: 'Quark::Layer::m_DebugName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Quark::Layer'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  LayerStack.cpp
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\Layer.h(22,15): warning C4251: 'Quark::Layer::m_DebugName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Quark::Layer'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(25,23): warning C4251: 'Quark::LayerStack::m_Layers': class 'std::vector<Quark::Layer *,std::allocator<Quark::Layer *>>' needs to have dll-interface to be used by clients of class 'Quark::LayerStack'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(22): message : see declaration of 'std::vector<Quark::Layer *,std::allocator<Quark::Layer *>>'
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\LayerStack.h(26,33): warning C4251: 'Quark::LayerStack::m_LayerInsert': class 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>' needs to have dll-interface to be used by clients of class 'Quark::LayerStack'
+          with
+          [
+              _Ty=Quark::Layer *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(470): message : see declaration of 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+          with
+          [
+              _Ty=Quark::Layer *
+          ]
+  Log.cpp
+  Generating Code...
      Creating library ..\bin\Debug-windows-x86_64\Quark\Quark.lib and object ..\bin\Debug-windows-x86_64\Quark\Quark.exp
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Quark.vcxproj -> D:\Physics Projects\QuarkEngine\bin\Debug-windows-x86_64\Quark\Quark.dll
