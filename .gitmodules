@@ -3,4 +3,7 @@
 	url = https://github.com/gabime/spdlog
 [submodule "Quark/vendor/GLFW"]
 	path = Quark/vendor/GLFW
-	url = https://github.com/TheCherno/GLFW
+	url = https://github.com/SlothInABox/glfw
+[submodule "Quark/vendor/imgui"]
+	path = Quark/vendor/imgui
+	url = https://github.com/SlothInABox/imgui
