@@ -16,6 +16,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           ]
 D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(31,27): warning C4251: 'Quark::Application::m_Window': class 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>' needs to have dll-interface to be used by clients of class 'Quark::Application'
 D:\Physics Projects\QuarkEngine\Quark\src\Quark\Application.h(31): message : see declaration of 'std::unique_ptr<Quark::Window,std::default_delete<Quark::Window>>'
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(65,80): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(65,51): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(69,80): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(69,51): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(164,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Physics Projects\QuarkEngine\Quark\src\Quark\ImGui\ImGuiLayer.cpp(164,37): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   Quark.vcxproj -> D:\Physics Projects\QuarkEngine\bin\Debug-windows-x86_64\Quark\Quark.dll
